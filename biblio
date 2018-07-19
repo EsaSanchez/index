@@ -59,5 +59,33 @@
         </fieldset>
 </form>
     </center>
+     <?php
+        include 'conexion.php';
+        // Captura de datos por medio de variables
+        if (isset($_POST['isbn'])) {
+    
+        $isbn=$_POST['isbn'];
+        $titulo=$_POST['titulo'];
+        $publicacion=$_POST['fecha_pub'];
+        $genero=$_POST['genero'];
+        $tomo=$_POST['num_tomo'];
+        $edicion=$_POST['num_edicion'];
+        $pagina=$_POST['num_pag'];
+        $editorial=$_POST['editorial'];
+       
+        //Insertar datos a base
+$insertar = "INSERT INTO tab_libro(isbn, titulo, fecha_pub, genero, num_tomo, num_edicion, num_pag, editorial)
+             VALUES ('$isbn', '$titulo', '$publicacion', '$genero', '$tomo', '$edicion', '$pagina', '$editorial')";
+$resultado= mysqli_query($conexion, $insertar);
+
+//Comprobacion para verificar que los datos hayan sido correctamente insertados en la tabla proveedores
+if (!$resultado) {
+    echo "datos ingresados erroneamente";
+} else {
+    echo header("location:index.php");    
+}
+  }
+       
+        ?>
     </body>
 </html>
