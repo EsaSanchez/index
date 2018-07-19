@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <center>
+            <form action='index.php' method='POST'>
+    <fieldset>
+        <legend><h1>Ingresa los datos del Libro</h1></legend>
+	<table>
+		
+                <tr>
+			<td>ISBN del libro:</td>
+                        <td> <input type="text" name="isbn" placeholder="Ingrese el ISBN del libro" required=""/></td>
+		</tr>
+                <tr>
+			<td>Titulo del libro:</td>
+                        <td> <input type="text" name="titulo" placeholder="Ingrese el titulo del libro" required=""/></td>
+		</tr>
+		<tr>
+			<td>Fecha de publicación:</td>
+			<td><input type="date" name="fecha_pub"  placeholder="Fecha de publicación" required=""/></td>
+		</tr>
+		<tr>
+			<td>Selecciona el género del libro:</td>
+                        <td><select name="genero"> <!-- Seleccion de genero literario-->
+                            <option></option>
+                            <option value="1">Fantastico</option>
+                            <option value="2"> Ciencia y ficcion</option>
+                            <option value="3">Policiaco</option>
+                            <option value="4">Terror</option>
+                            <option value="5">Gotico</option>
+                            <option value="6">Educativo</option>
+                            </select></td>
+		</tr>
+                <tr>
+			<td>Número de tomo:</td>
+			<td><input type="number" min="0" name="num_tomo"  placeholder="Digite el número de tomo" required=""/></td>
+		</tr>
+                <tr>
+			<td>Número de edición:</td>
+			<td><input type="number" min="0" name="num_edicion"  placeholder="Digite el número de edición" required=""/></td>
+		</tr>
+                <tr>
+			<td>Número de páginas:</td>
+			<td><input type="number" name="num_pag"  placeholder="Digite el número de paginas" required=""/></td>
+		</tr>
+                <tr>
+			<td>Editorial Proveniente:</td>
+			<td><input type="text" name="editorial"  placeholder="Digite la editorial proveniente" required=""/></td>
+		</tr>
+		<input type='hidden' name='Ingresar' value='Ingresar'>
+	</table>
+    <input type='submit' value='Guardar'><br>
+    <br>
+	<a href="index.php">Volver</a>
+        </fieldset>
+</form>
+    </center>
+    </body>
+</html>
